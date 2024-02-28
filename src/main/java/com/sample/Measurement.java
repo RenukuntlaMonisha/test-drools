@@ -11,39 +11,59 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
-*/
+ */
 
 package com.sample;
 
 public class Measurement {
-    private String id;
-    private String val;
+	private String id;
+	private String val;
 
-    public Measurement(String id, String val) {
-        super();
-        this.id = id;
-        this.val = val;
-    }
+	@org.kie.api.definition.type.Label(value = "value")
+	private java.lang.Integer value;
 
-    public String getId() {
-        return id;
-    }
+	public Measurement(String id, String val) {
+		super();
+		this.id = id;
+		this.val = val;
+	}
 
-    public String getVal() {
-        return val;
-    }
+	public String getId() {
+		return id;
+	}
 
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Measurement [");
-        if (id != null)
-            builder.append("id=").append(id).append(", ");
-        if (val != null)
-            builder.append("val=").append(val);
-        builder.append("]");
-        return builder.toString();
-    }
+	public String getVal() {
+		return val;
+	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Measurement [");
+		if (id != null)
+			builder.append("id=").append(id).append(", ");
+		if (val != null)
+			builder.append("val=").append(val);
+		builder.append("]");
+		return builder.toString();
+	}
+
+	public java.lang.Integer getValue() {
+		return this.value;
+	}
+
+	public void setValue(java.lang.Integer value) {
+		this.value = value;
+	}
+
+	public Measurement() {
+	}
+
+	public Measurement(java.lang.String id, java.lang.String val,
+			java.lang.Integer value) {
+		this.id = id;
+		this.val = val;
+		this.value = value;
+	}
 
 }

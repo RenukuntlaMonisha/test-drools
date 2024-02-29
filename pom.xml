@@ -5,7 +5,7 @@
   <groupId>com.sample</groupId>
   <artifactId>basicKjar</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>kjar</packaging>
+  <packaging>pom</packaging>
 
   <name>basicKjar</name>
   <modules>
@@ -13,6 +13,17 @@
     <module>project-2</module>
   </modules>
 
+  <properties>
+    <drools-version>7.61.0.Final</drools-version>
+  </properties>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>fk-jfrog-release</id>
+      <name>Flipkart-Artifactory</name>
+      <url>https://jfrog.fkinternal.com/artifactory/maven_virtual</url>
+    </pluginRepository>
+  </pluginRepositories>
   <build>
     <plugins>
       <plugin>
@@ -30,6 +41,5 @@
         <extensions>true</extensions>
       </plugin>
     </plugins>
-
   </build>
 </project>

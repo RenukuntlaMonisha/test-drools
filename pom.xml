@@ -8,6 +8,10 @@
   <packaging>kjar</packaging>
 
   <name>basicKjar</name>
+  <modules>
+    <module>project-1</module>
+    <module>project-2</module>
+  </modules>
 
   <build>
     <plugins>
